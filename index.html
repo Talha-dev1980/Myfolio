@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MyFolio Talha Shaukat - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <style>
+  .card-description {
+  height: 120px; /* Adjust height as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Project data
+  const projects = {
+    "CryptoHuntGo": {
+      title: "CryptoHuntGo",
+      category: "Mobile App",
+      thumb: "assets/img/cryptohuntgo-thumb.jpg",
+      description: "Find Crypto assets on a map and claim them in your wallet. These Assets can be NFTs or Tokens. Integrated Open Street maps to find and show NFTs locations, used MVVM architecture, and connected Meta Mask wallet to app claim the found NFT into the Wallet."
+    },
+    "ChillOrder": {
+      title: "Chill Order",
+      category: "Mobile App",
+      thumb: "assets/img/chillorder-thumb.jpg",
+      description: "An app for ordering cold drinks at wholesale rates specifically for a brand. Designed SQL database, developed REST APIs with Nodejs and integrated with Retrofit, hosted the REST APIs on Always.net using FileZilla, and integrated Firebase push notifications."
+    },
+    "RedEyed": {
+      title: "RedEyed",
+      category: "Mobile App",
+      thumb: "assets/img/redeyed-thumb.jpg",
+      description: "Record any emergency news video and sell it on blockchain as NFT to earn crypto. Developed functionality using Java, integrated REST APIs with Retrofit, and connected Meta Mask wallet to the app for selling video NFTs."
+    },
+    "OZTrainer": {
+      title: "OZ Trainer",
+      category: "Mobile App",
+      thumb: "assets/img/oztrainer-thumb.jpg",
+      description: "App is for people who want to learn driving, they can search drivers in their locality who are willing to teach driving. OZ Trainer is to register as trainer and make a schedule of available slots. Firebase is used as database in the app, Google maps integrated to sync with trainee."
+    },
+    "Djselfie": {
+      title: "Djselfie",
+      category: "Mobile App",
+      thumb: "assets/img/djselfie-thumb.jpg",
+      description: "App for recording selfies with DJ sounds and effects. Integrated with various sound libraries, and developed using the latest Android frameworks. Enhanced user experience with intuitive interface and real-time audio processing for dynamic content creation."
+    },
+    "TempleofFit": {
+      title: "Temple of Fit",
+      category: "Mobile App",
+      thumb: "assets/img/templeoffit-thumb.jpg",
+      description: "Connect your smart devices to the app and the app will merge their data, show analysis, and provide chat with professionals. App built with MVVM pattern and following AOOP concepts in Java, Retrofit is used to integrate RESTful APIs in the app, and MPAndroidChart."
+    }
+  };
+
+  // Populate project cards
+  let projectContainer = document.getElementById('project-container');
+  projectContainer.innerHTML = '';
+
+  for (let projectKey in projects) {
+    const project = projects[projectKey];
+    const projectCard = `
+      <div class="swiper-slide">
+        <div class="card card-blog">
+          <div class="card-img">
+            <a href="blog-single.html?project=${projectKey}"><img src="${project.thumb}" alt="${project.title}" class="img-fluid"></a>
+          </div>
+          <div class="card-body">
+            <div class="card-category-box">
+              <div class="card-category">
+                <h6 class="category">${project.category}</h6>
+              </div>
+            </div>
+            <h3 class="card-title"><a href="blog-single.html?project=${projectKey}">${project.title}</a></h3>
+            <p class="card-description">
+              ${project.description}
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="post-author">
+              <a href="blog-single.html?project=${projectKey}">
+                <span class="author">See Details...</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    projectContainer.innerHTML += projectCard;
+  }
+
+  // Initialize Swiper after dynamic content is loaded
+  new Swiper('.swiper-container', {
+    speed: 400,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    }
+  });
+});
+
+</script>
+
+  <!-- =======================================================
+  * Template Name: MyFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">MyFolio</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#projects">Projects</a></li>
+          <li><a class="nav-link scrollto " href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="hero-title mb-4">I am Talha Shaukat</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Software Developer, Mobile App Developer"></span></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="assets/img/testimonial-2.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Talha Shaukat</span></p>
+                        <p><span class="title-s">Profile: </span> <span>Software Developer</span></p>
+                        <p><span class="title-s">Email: </span> <span>talha.wien3110@gmail.com</span></p>
+                        <p><span class="title-s">Phone: </span> <span>(+43) 6602666538</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Skill</p>
+                    <span>Java</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Android Development</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Node.js</span> <span class="pull-right">70%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>SQL</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>REST API</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Solidity</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Git</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        About me
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      Passionate and experienced Software Developer with expertise in mobile app development, backend development, and blockchain development. Skilled in Java, Android, Node.js, SQL, and more.
+                    </p>
+                    <p class="lead">
+                      I have a strong background in developing robust and efficient solutions for various applications, ensuring high quality and performance.
+                    </p>
+                    <p class="lead">
+                      I am always eager to learn new technologies and keep myself updated with the latest trends in the software development industry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services-mf pt-5 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Services
+              </h3>
+              <p class="subtitle-a">
+                I offer a range of services to help you achieve your goals. Whether you need software development, mobile app creation, or blockchain integration, I have the skills and experience to deliver top-notch results.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Web Development</h2>
+                <p class="s-description text-center">
+                  Specializing in modern web technologies to build responsive and interactive websites tailored to your business needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Mobile App Development</h2>
+                <p class="s-description text-center">
+                  Expert in creating mobile applications that are user-friendly, efficient, and scalable. Experienced with Android development and cross-platform solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Backend Development</h2>
+                <p class="s-description text-center">
+                  Proficient in backend technologies, including Node.js and SQL, to develop robust and secure server-side applications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Blockchain Development</h2>
+                <p class="s-description text-center">
+                  Skilled in blockchain technologies, including Solidity and smart contract development, to integrate blockchain solutions into your projects.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Graphic Design</h2>
+                <p class="s-description text-center">
+                  Providing visually appealing and effective graphic design solutions to enhance your brand identity.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Consultancy</h2>
+                <p class="s-description text-center">
+                  Providing expert consultancy services to help you navigate the complexities of software development and digital transformation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Counter Section ======= -->
+    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-check"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="450" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">WORKS COMPLETED</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">YEARS OF EXPERIENCE</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-people"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="550" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">TOTAL CLIENTS</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-award"></i></span>
+              </div>
+              <div class="counter-num">
+                <p data-purecounter-start="0" data-purecounter-end="48" data-purecounter-duration="1" class="counter purecounter"></p>
+                <span class="counter-text">AWARD WON</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Counter Section -->
+
+<section id="projects" class="blog-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">Projects</h3>
+          <p class="subtitle-a">Here are the projects I have done.</p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html?project=CryptoHuntGo"><img src="assets/img/cryptohuntgo-thumb.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Mobile App</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html?project=CryptoHuntGo">CryptoHuntGo</a></h3>
+              <p class="card-description">
+                Find Crypto assets on a map and claim them in your wallet. These Assets can be NFTs or Tokens. Integrated Open Street maps to find and show NFTs locations, used MVVM architecture, and connected Meta Mask wallet to app claim the found NFT into the Wallet.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="blog-single.html?project=CryptoHuntGo">
+                  <span class="author">See Details...</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html?project=ChillOrder"><img src="assets/img/chillorder-thumb.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Mobile App</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html?project=ChillOrder">Chill Order</a></h3>
+              <p class="card-description">
+                An app for ordering cold drinks at wholesale rates specifically for a brand. Designed SQL database, developed REST APIs with Nodejs and integrated with Retrofit, hosted the REST APIs on Always.net using FileZilla, and integrated Firebase push notifications.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="blog-single.html?project=ChillOrder">
+                  <span class="author">See Details...</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html?project=RedEyed"><img src="assets/img/redeyed-thumb.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Mobile App</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html?project=RedEyed">RedEyed</a></h3>
+              <p class="card-description">
+                Record any emergency news video and sell it on blockchain as NFT to earn crypto. Developed functionality using Java, integrated REST APIs with Retrofit, and connected Meta Mask wallet to the app for selling video NFTs.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="blog-single.html?project=RedEyed">
+                  <span class="author">See Details...</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html?project=OZTrainer"><img src="assets/img/oztrainer-thumb.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Mobile App</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html?project=OZTrainer">OZ Trainer</a></h3>
+              <p class="card-description">
+                App is for people who want to learn driving, they can search drivers in their locality who are willing to teach driving. OZ Trainer is to register as trainer and make a schedule of available slots. Firebase is used as database in the app, Google maps integrated.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="blog-single.html?project=OZTrainer">
+                  <span class="author">See Details...</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html?project=Djselfie"><img src="assets/img/djselfie-thumb.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Mobile App</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html?project=Djselfie">Djselfie</a></h3>
+              <p class="card-description">
+                App for recording selfies with DJ sounds and effects. Integrated with various sound libraries, and developed using the latest Android frameworks. Enhanced user experience with intuitive interface and real-time audio processing for dynamic content creation.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="blog-single.html?project=Djselfie">
+                  <span class="author">See Details...</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html?project=TempleofFit"><img src="assets/img/templeoffit-thumb.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Mobile App</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html?project=TempleofFit">Temple of Fit</a></h3>
+              <p class="card-description">
+                Connect your smart devices to the app and the app will merge their data, show analysis, and provide chat with professionals. App built with MVVM pattern and following AOOP concepts in Java, Retrofit is used to integrate RESTful APIs in the app, and MPAndroidChart.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="blog-single.html?project=TempleofFit">
+                  <span class="author">See Details...</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<!-- End Blog Section -->
+    
+
+    <!-- ======= Testimonials Section ======= -->
+    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="author-test">
+                      <img src="assets/img/testimonial-2-small.jpg" alt="" class="rounded-circle b-shadow-a">
+                      <span class="author">Xavi Alonso</span>
+                    </div>
+                    <div class="content-test">
+                      <p class="description lead">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="author-test">
+                      <img src="assets/img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
+                      <span class="author">Marta Socrate</span>
+                    </div>
+                    <div class="content-test">
+                      <p class="description lead">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
+          
+        </div> -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Testimonials Section -->
+
+    <!-- ======= Blog Section ======= -->
+ <!-- Projects Section -->
+<!-- ======= Portfolio Section ======= -->
+    <section id="gallery" class="portfolio-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Gallery
+              </h3>
+              <p class="subtitle-a">
+                See some Iages I have captured.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Lorem impsum dolor</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-2.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Loreda Cuno Nere</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-3.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Mavrito Lana Dere</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-4.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Bindo Laro Cado</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-5.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-6.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Studio Big Bang</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">
+                        Get in Touch
+                      </h5>
+                    </div>
+                    <div class="more-info">
+                      <p class="lead">
+                        Feel free to reach out to me through any of the contact details below. I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                      </p>
+                      <ul class="list-ico">
+                        <li><span class="bi bi-geo-alt"></span> Godlewskigasse 24/10-11, 1220 Wien, Austria</li>
+                        <li><span class="bi bi-phone"></span> (+43) 6602666538</li>
+                        <li><span class="bi bi-envelope"></span> talha.wien3110@gmail.com</li>
+                      </ul>
+                    </div>
+                    <div class="socials">
+                      <ul>
+                        <li><a href="https://www.facebook.com"><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
+                        <li><a href="https://www.instagram.com"><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
+                        <li><a href="https://www.twitter.com"><span class="ico-circle"><i class="bi bi-twitter"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/talha-shaukat-63993617a/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+            -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 4000, // Adjust delay as needed
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+</body>
+
+</html>

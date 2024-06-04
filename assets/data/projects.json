@@ -1,0 +1,42 @@
+{
+  "CryptoHuntGo": {
+    "title": "CryptoHuntGo",
+    "author": "Talha Shaukat",
+    "category": "Mobile App",
+    "thumb": "assets/img/cryptohuntgo-thumb.jpg",
+    "content": "<h2>Project Outline</h2><p>Find Crypto assets on a map and claim them in your wallet. These Assets can be NFTs or Tokens. Integrated Open Street maps to find and show NFTs locations, used MVVM architecture, and connected Meta Mask wallet to app claim the found NFT into the Wallet.</p><h2>Technical Implementation</h2><p>Based on the technical expertise demonstrated in the project, the development of CryptoHuntGo incorporates various advanced technologies and methodologies.</p><ul><li>Integrated REST APIs using Retrofit.</li><li>Used CameraX API for camera and Recording video.</li></ul>",
+    "images": [
+      { "src": "assets/img/cryptohuntgo-1.jpg", "caption": "Find Crypto Assets" },
+      { "src": "assets/img/cryptohuntgo-2.jpg", "caption": "Map Integration" },
+      { "src": "assets/img/cryptohuntgo-3.jpg", "caption": "Claim NFTs" }
+    ],
+    "tags": ["Crypto", "Blockchain", "NFT", "Mobile App", "Geolocation"]
+  },
+  "ChillOrder": {
+    "title": "Chill Order",
+    "author": "Talha Shaukat",
+    "category": "Mobile App",
+    "thumb": "assets/img/chillorder-thumb.jpg",
+    "content": "<h2>Project Outline</h2><p>An app for ordering cold drinks at wholesale rates specifically for a brand. Designed SQL database, developed REST APIs with Nodejs and integrated with Retrofit, hosted the REST APIs on Always.net using FileZilla, and integrated Firebase push notifications.</p><h2>Technical Implementation</h2><p>Based on the technical expertise demonstrated in the project, the development of Chill Order incorporates various advanced technologies and methodologies.</p><ul><li>Integrated REST APIs using Retrofit.</li><li>Used CameraX API for camera and Recording video.</li></ul>",
+    "images": [
+      { "src": "assets/img/chillorder-1.jpg", "caption": "Order Cold Drinks" },
+      { "src": "assets/img/chillorder-2.jpg", "caption": "Wholesale Rates" },
+      { "src": "assets/img/chillorder-3.jpg", "caption": "Brand Specific" }
+    ],
+    "tags": ["Order", "Cold Drinks", "Wholesale", "Firebase", "SQL"]
+  },
+  "RedEyed": {
+    "title": "RedEyed",
+    "author": "Talha Shaukat",
+    "category": "Mobile App",
+    "thumb": "assets/img/redeyed-thumb.jpg",
+    "content": "<h2>Project Outline</h2><p>RedEyed is a pioneering mobile application that enables users to record videos of incidents and sell them as NFTs. The application leverages blockchain technology to provide a secure and transparent marketplace for user-generated content. Users can log into the app using their MetaMask wallet, record videos, and post them with a set price. While the marketplace functionality is handled by a web application, the mobile app focuses on recording and posting videos, as well as managing user profiles.</p><h2>Details</h2><p>User login to the app by connecting with metamask wallet, then user can click start broadcasting it will open up the camera and user can record it and when recorded he will select the category title description and post it. On a profile section user setup name and price.</p><h2>Technical Implementation</h2><ul><li>Integrated REST APIs using Retrofit.</li><li>Used CameraX API for camera and Recording video.</li><li>MetaMask Integration: The app uses MetaMask to enable secure login and wallet connection, allowing users to interact with blockchain assets seamlessly.</li><li>Users can set up their profile by providing a name and setting a call price for their recorded videos.</li><li>Camera API: Users can start recording videos by clicking the 'Start Broadcasting' button, which opens the camera interface within the app.</li><li>Video Metadata: After recording, users can add details such as category, title, and description before posting the video.</li><li>NFT Posting: The recorded video is posted as an NFT with a call price set by the user, leveraging the MetaMask wallet for secure transactions.</li><li>Although the marketplace is managed via a web application, the mobile app ensures smooth integration by securely posting videos and related metadata to the web platform.</li></ul>",
+    "images": [
+      { "src": "assets/img/redeyed-1.jpg", "caption": "Connect Your Wallet" },
+      { "src": "assets/img/redeyed-2.jpg", "caption": "Set your minimum Ask Price" },
+      { "src": "assets/img/redeyed-3.jpg", "caption": "Select Broadcast Category" },
+      { "src": "assets/img/redeyed-4.jpg", "caption": "Mint or Upload Your Video to earn" }
+    ],
+    "tags": ["Blockchain", "NFT", "Video", "MetaMask", "Mobile App"]
+  }
+}

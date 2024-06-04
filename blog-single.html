@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title id="page-title">MyFolio Talha Shaukat - Project Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .work-img img {
+      max-height: 500px; /* Set your desired max height */
+      max-width: 100%;
+      width: 400px;
+      object-fit: cover; /* This ensures the image maintains aspect ratio */
+      overflow: hidden;
+      align-items: center;
+    }
+  </style>
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Define project details
+  const projects = {
+    "CryptoHuntGo": {
+      title: "CryptoHuntGo",
+      author: "Talha Shaukat",
+      category: "Mobile App",
+      thumb: "assets/img/cryptohuntgo-thumb.jpg",
+      content: `
+        <h2>Project Outline</h2>
+        <p>Find Crypto assets on a map and claim them in your wallet. These Assets can be NFTs or Tokens. Integrated Open Street maps to find and show NFTs locations, used MVVM architecture, and connected Meta Mask wallet to app claim the found NFT into the Wallet.</p>
+        <h2>Technical Implementation</h2>
+        <p>Based on the technical expertise demonstrated in the project, the development of CryptoHuntGo incorporates various advanced technologies and methodologies.</p>
+        <ul>
+          <li>Integrated REST APIs using Retrofit.</li>
+          <li>Used CameraX API for camera and Recording video.</li>
+        </ul>`,
+      images: [
+        { src: "assets/img/cryptohuntgo-1.jpg", caption: "Find Crypto Assets" },
+        { src: "assets/img/cryptohuntgo-2.jpg", caption: "Map Integration" },
+        { src: "assets/img/cryptohuntgo-3.jpg", caption: "Claim NFTs" }
+      ],
+      tags: ["Crypto", "Blockchain", "NFT", "Mobile App", "Geolocation"]
+    },
+    "ChillOrder": {
+      title: "Chill Order",
+      author: "Talha Shaukat",
+      category: "Mobile App",
+      thumb: "assets/img/chillorder-thumb.jpg",
+      content: `
+        <h2>Project Outline</h2>
+        <p>An app for ordering cold drinks at wholesale rates specifically for a brand. Designed SQL database, developed REST APIs with Nodejs and integrated with Retrofit, hosted the REST APIs on Always.net using FileZilla, and integrated Firebase push notifications.</p>
+        <h2>Technical Implementation</h2>
+        <p>Based on the technical expertise demonstrated in the project, the development of Chill Order incorporates various advanced technologies and methodologies.</p>
+        <ul>
+          <li>Integrated REST APIs using Retrofit.</li>
+          <li>Used CameraX API for camera and Recording video.</li>
+        </ul>`,
+      images: [
+        { src: "assets/img/chillorder-1.jpg", caption: "Order Cold Drinks" },
+        { src: "assets/img/chillorder-2.jpg", caption: "Wholesale Rates" },
+        { src: "assets/img/chillorder-3.jpg", caption: "Brand Specific" }
+      ],
+      tags: ["Order", "Cold Drinks", "Wholesale", "Firebase", "SQL"]
+    },
+    "RedEyed": {
+      title: "RedEyed",
+      author: "Talha Shaukat",
+      category: "Mobile App",
+      thumb: "assets/img/redeyed-thumb.jpg",
+      content: `
+        <h2>Project Outline</h2>
+        <p>RedEyed is a pioneering mobile application that enables users to record videos of incidents and sell them as NFTs. The application leverages blockchain technology to provide a secure and transparent marketplace for user-generated content. Users can log into the app using their MetaMask wallet, record videos, and post them with a set price. While the marketplace functionality is handled by a web application, the mobile app focuses on recording and posting videos, as well as managing user profiles.</p>
+        <h2>Details</h2>
+        <p>User login to the app by connecting with metamask wallet, then user can click start broadcasting it will open up the camera and user can record it and when recorded he will select the category title description and post it. On a profile section user setup name and price.</p>
+        <h2>Technical Implementation</h2>
+        <ul>
+          <li>Integrated REST APIs using Retrofit.</li>
+          <li>Used CameraX API for camera and Recording video.</li>
+          <li>MetaMask Integration: The app uses MetaMask to enable secure login and wallet connection, allowing users to interact with blockchain assets seamlessly.</li>
+          <li>Users can set up their profile by providing a name and setting a call price for their recorded videos.</li>
+          <li>Camera API: Users can start recording videos by clicking the 'Start Broadcasting' button, which opens the camera interface within the app.</li>
+          <li>Video Metadata: After recording, users can add details such as category, title, and description before posting the video.</li>
+          <li>NFT Posting: The recorded video is posted as an NFT with a call price set by the user, leveraging the MetaMask wallet for secure transactions.</li>
+          <li>Although the marketplace is managed via a web application, the mobile app ensures smooth integration by securely posting videos and related metadata to the web platform.</li>
+        </ul>`,
+      images: [
+        { src: "assets/img/redeyed-1.jpg", caption: "Connect Your Wallet" },
+        { src: "assets/img/redeyed-2.jpg", caption: "Set your minimum Ask Price" },
+        { src: "assets/img/redeyed-3.jpg", caption: "Select Broadcast Category" },
+        { src: "assets/img/redeyed-4.jpg", caption: "Mint or Upload Your Video to earn" }
+      ],
+      tags: ["Blockchain", "NFT", "Video", "MetaMask", "Mobile App"]
+    },
+    // Add other projects here
+  };
+
+  // Get the project from the URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectKey = urlParams.get('project');
+
+  // If the project exists in the dictionary, populate the page
+  if (projects[projectKey]) {
+    const project = projects[projectKey];
+    document.getElementById('page-title').innerText = project.title + " - Project Details";
+    document.getElementById('hero-title').innerText = project.title;
+    document.getElementById('breadcrumb-title').innerText = project.title;
+    document.getElementById('project-title').innerText = project.title;
+    document.getElementById('project-author').innerText = project.author;
+    document.getElementById('project-category').innerText = project.category;
+    document.getElementById('project-content').innerHTML = project.content;
+    document.getElementById('project-thumb').src = project.thumb;
+
+    // Populate images and captions
+    let imagesHtml = '';
+    project.images.forEach(image => {
+      imagesHtml += `
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="${image.src}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+              <div class="work-img">
+                <img src="${image.src}" alt="" class="img-fluid">
+              </div>
+            </a>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">${image.caption}</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    });
+    document.getElementById('project-images').innerHTML = imagesHtml;
+
+    // Populate tags
+    let tagsHtml = '';
+    project.tags.forEach(tag => {
+      tagsHtml += `<li><a href="#">${tag}</a></li>`;
+    });
+    document.getElementById('project-tags').innerHTML = tagsHtml;
+  } else {
+    document.getElementById('page-title').innerText = "Project Not Found - Project Details";
+    document.getElementById('hero-title').innerText = "Project Not Found";
+    document.getElementById('breadcrumb-title').innerText = "Project Not Found";
+    document.getElementById('project-title').innerText = "Project Not Found";
+    document.getElementById('project-content').innerHTML = "<p>The project you are looking for does not exist.</p>";
+    document.getElementById('project-thumb').src = "assets/img/not-found-thumb.jpg"; // Placeholder image for not found
+
+    // Clear images and tags
+    document.getElementById('project-images').innerHTML = '';
+    document.getElementById('project-tags').innerHTML = '';
+  }
+});
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">MyFolio</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#projects">Projects</a></li>
+          <li><a class="nav-link scrollto " href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <div class="hero hero-single route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h2 class="hero-title" id="hero-title">Project Title</h2>
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Projects</a>
+            </li>
+            <li class="breadcrumb-item active" id="breadcrumb-title">Project Title</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ======= Blog Single Section ======= -->
+    <section class="blog-wrapper sect-pt4" id="blog">
+      <div class="container">
+        <div class="row">
+         <div class="col-md-8">
+  <div class="post-box">
+    <div class="post-thumb">
+      <img id="project-thumb" src="assets/img/redeyed-thumb.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="post-meta">
+      <h1 class="article-title" id="project-title">Project Title</h1>
+      <ul>
+        <li>
+          <span class="bi bi-person"></span>
+          <a href="#" id="project-author">Author</a>
+        </li>
+        <li>
+          <span class="bi bi-tag"></span>
+          <a href="#" id="project-category">Category</a>
+        </li>
+		<li>
+          <span class="bi bi-tag"></span>
+          <a href="#screens" id="project-category">Screens</a>
+        </li>
+      </ul>
+    </div>
+    <div class="article-content" id="project-content">
+      <p>Project content goes here...</p>
+    </div>
+  </div>
+</div>
+
+          <div class="col-md-4">
+            <div class="widget-sidebar">
+              <h5 class="sidebar-title">My Projects</h5>
+              <div class="sidebar-content">
+                <ul class="list-sidebar">
+                  <li>
+                    <a href="blog-single.html?project=CryptoHuntGo">CryptoHuntGo</a>
+                  </li>
+                  <li>
+                    <a href="blog-single.html?project=ChillOrder">Chill Order</a>
+                  </li>
+                  <li>
+                    <a href="blog-single.html?project=DjSelfie">DjSelfie</a>
+                  </li>
+                  <li>
+                    <a href="blog-single.html?project=OZTrainer">OZ Trainer</a>
+                  </li>
+                  <li>
+                    <a href="blog-single.html?project=EasyIslam">EasyIslam</a>
+                  </li>
+				  <li>
+                    <a href="blog-single.html?project=RedEyed">RedEyed</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+           
+           <div class="widget-sidebar widget-tags">
+  <h5 class="sidebar-title">Tags</h5>
+  <div class="sidebar-content">
+    <ul id="project-tags">
+      <li><a href="#">Web.</a></li>
+      <li><a href="#">Design.</a></li>
+      <li><a href="#">Travel.</a></li>
+      <li><a href="#">Photoshop</a></li>
+      <li><a href="#">Corel Draw</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Blog Single Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="screens" class="portfolio-mf sect-pt4 route">
+      <div class="container">
+        <div class="row" id="project-images">
+          <!-- Images will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+            -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
