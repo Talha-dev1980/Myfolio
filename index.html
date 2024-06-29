@@ -38,6 +38,13 @@
     document.addEventListener('DOMContentLoaded', function () {
       // Project data
       const projects = {
+        "EasyIslam": {
+          title: "Easy Islam",
+          category: "Mobile App",
+          thumb: "assets/img/easyIslam-thumb.jpg",
+          description: "A comprehensive app to ease the study of Islam, integrating seven Hadith books and the Holy Quran. Features include resume reading from last-read position, offline access to read content, keyword-based search functionality for Ahadith, minimal non-intrusive ads, and the ability to mark the last seen verse in the Holy Quran. Built with MVVM architecture, designed SQL database, developed REST APIs with Node.js and integrated with Retrofit, hosted the REST APIs on Always.net using FileZilla."
+     },
+
         "CryptoHuntGo": {
           title: "CryptoHuntGo",
           category: "Mobile App",
@@ -448,9 +455,39 @@
             </div>
           </div>
         </div>
+		
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
+              <div class="card card-blog">
+                <div class="card-img">
+                  <a href="blog-single.html?project=EasyIslam"><img src="assets/img/easyIslam-thumb.jpg" alt=""
+                      class="img-fluid"></a>
+                </div>
+                <div class="card-body">
+                  <div class="card-category-box">
+                    <div class="card-category">
+                      <h6 class="category">Mobile App</h6>
+                    </div>
+                  </div>
+                  <h3 class="card-title"><a href="blog-single.html?project=EasyIslam">EasyIslam</a></h3>
+                  <p class="card-description">
+                    A comprehensive app to ease the study of Islam, integrating seven Hadith books and the Holy Quran. 
+					Features include resume reading from last-read position, 
+					offline access to read content, keyword-based search functionality for Ahadith,
+					minimal non-intrusive ads.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <div class="post-author">
+                    <a href="blog-single.html?project=CryptoHuntGo">
+                      <span class="author">See Details...</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+			<div class="swiper-slide">
               <div class="card card-blog">
                 <div class="card-img">
                   <a href="blog-single.html?project=CryptoHuntGo"><img src="assets/img/cryptohuntgo-thumb.jpg" alt=""
@@ -736,7 +773,7 @@
                 Gallery
               </h3>
               <p class="subtitle-a">
-                See some Iages I have captured.
+                Here are some Images I captured.
               </p>
               <div class="line-mf"></div>
             </div>
